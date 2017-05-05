@@ -1,0 +1,7 @@
+package com.framgia.soundcloudmusic.main.model;
+
+
+public class user{
+	private String mName;
+	private int mAge;
+}

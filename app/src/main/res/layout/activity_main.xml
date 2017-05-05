@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:id="@+id/activity_main"
+<LinearLayout
                 xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
@@ -8,7 +8,41 @@
                 android:paddingLeft="@dimen/activity_horizontal_margin"
                 android:paddingRight="@dimen/activity_horizontal_margin"
                 android:paddingTop="@dimen/activity_vertical_margin"
+                android:orientation="vertical"
                 tools:context="com.framgia.soundcloudmusic.main.MainActivity">
 
+    <TextView
+        android:textColor="@color/colorTopic"
+        android:textSize="@dimen/size_text_topic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_chart"
+        android:layout_marginBottom="@dimen/margin_top_bottom"/>
+    <android.support.v7.widget.RecyclerView
+        android:scrollbars="none"
+        android:divider="@null"
+        android:dividerHeight="5dp"
+        android:id="@+id/recycle_chart"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+    </android.support.v7.widget.RecyclerView>
 
-</RelativeLayout>
+    <TextView
+        android:layout_marginTop="@dimen/margin_top_bottom"
+        android:layout_marginBottom="@dimen/margin_top_bottom"
+        android:textColor="@color/colorTopic"
+        android:textSize="@dimen/size_text_topic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_genre"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerGenre"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>
